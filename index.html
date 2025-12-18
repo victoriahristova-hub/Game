@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas Cookie Adventure 🍪</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Start Screen -->
+    <div id="start-screen" class="screen">
+        <div class="screen-content">
+            <h1>🍪 Christmas Cookie Adventure 🍪</h1>
+            <p>Help the gingerbread cookie collect all Christmas items!</p>
+            <p>Avoid the grumpy green teacher who hates Christmas!</p>
+            <div class="instructions">
+                <p>🎮 Use <strong>Arrow Keys</strong> or <strong>WASD</strong> to move</p>
+                <p>🎄 Collect all items to win!</p>
+                <p>⚠️ Don't touch the teacher!</p>
+            </div>
+            <button id="start-btn" class="game-btn">Start Game 🎄</button>
+        </div>
+    </div>
+
+    <!-- Game Screen -->
+    <div id="game-screen" class="screen hidden">
+        <div id="score-board">
+            <span>🍬 Items: <span id="score">0</span> / <span id="total-items">0</span></span>
+        </div>
+        <div id="game-container">
+            <!-- School Background Decorations -->
+            <div class="decoration locker" style="left: 50px; top: 50px;"></div>
+            <div class="decoration locker" style="left: 50px; top: 150px;"></div>
+            <div class="decoration locker" style="left: 50px; top: 250px;"></div>
+            <div class="decoration blackboard" style="right: 50px; top: 80px;"></div>
+            <div class="decoration desk" style="right: 100px; bottom: 100px;"></div>
+            <div class="decoration desk" style="right: 200px; bottom: 100px;"></div>
+            <div class="decoration christmas-tree" style="left: 350px; top: 30px;"></div>
+            <div class="decoration wreath" style="left: 200px; top: 20px;"></div>
+            <div class="decoration garland"></div>
+            
+            <!-- Player (Cookie) -->
+            <div id="player"></div>
+            
+            <!-- Teacher (Enemy) -->
+            <div id="teacher"></div>
+            
+            <!-- Collectible items will be added by JavaScript -->
+        </div>
+    </div>
+
+    <!-- Game Over Screen -->
+    <div id="gameover-screen" class="screen hidden">
+        <div class="screen-content">
+            <h1>😱 Game Over!</h1>
+            <p>The grumpy teacher caught you!</p>
+            <p>Items collected: <span id="final-score">0</span></p>
+            <button id="retry-btn" class="game-btn">Try Again 🔄</button>
+        </div>
+    </div>
+
+    <!-- Win Screen -->
+    <div id="win-screen" class="screen hidden">
+        <div class="screen-content">
+            <h1>🎉 You Win! 🎉</h1>
+            <p>You collected all the Christmas items!</p>
+            <p>Merry Christmas! 🎄</p>
+            <button id="play-again-btn" class="game-btn">Play Again 🍪</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
